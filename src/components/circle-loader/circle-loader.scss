@@ -1,0 +1,52 @@
+.circle-loader {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+    overflow: hidden;
+    img {
+        width: 30%;
+        position: absolute;
+        &.blue-semi-circle {
+            animation: circle-spin infinite 120s linear;
+        }
+        &.blue-circle {
+            animation: circle-spin infinite 100s linear;
+        }
+
+        &.green-semi-circle {
+            animation: circle-spin infinite 90s linear;
+        }
+        &.green-circle {
+            animation: circle-spin infinite 80s linear;
+        }
+        &.yellow-semi-circle {
+            animation: circle-spin infinite 70s linear;
+        }
+        &.yellow-circle {
+            animation: circle-spin infinite 60s linear;
+        }
+        &.orange-semi-circle {
+            animation: circle-spin infinite 50s linear;
+        }
+        &.orange-circle {
+            animation: circle-spin infinite 40s linear;
+        }
+        &.red-semi-circle {
+            animation: circle-spin infinite 30s linear;
+        }
+        &.red-circle {
+            animation: circle-spin infinite 20s linear;
+        }
+        &.background-circle {            
+            min-width: 500px;
+            max-width: 100%;
+            animation: circle-spin infinite 120s linear;
+        }
+    }
+}
+
+@keyframes circle-spin {
+    from {
+      transform: rotate(0deg); }
+    to {
+      transform: rotate(360deg); } }

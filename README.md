@@ -1,11 +1,17 @@
 # Simple React Website to showcase my profile
 
+- Simple Portfolio site using React JS
+- Reference Stie:  [Atom Editor Website](https://atom.io/)
 
+# Plan
 
+> -  Markdown parser using Node / React Js
+> -  React Pose Animation
+> -  Mail service for contacting using the Website
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+# Available Scripts
 
 In the project directory, you can run:
 

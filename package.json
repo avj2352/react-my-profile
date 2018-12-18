@@ -1,6 +1,6 @@
 {
   "name": "my-react-profile",
-  "author": {"Pramod"},
+  "author": "Pramod",
   "description": "React powered Job Profile",
   "version": "0.1.0",
   "private": true,
