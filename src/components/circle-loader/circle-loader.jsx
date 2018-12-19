@@ -14,6 +14,7 @@ import orangeCircleSVG from './../../assets/svg/orange.svg';
 import redSemiCircleSVG from './../../assets/svg/red-semi.svg';
 import redCircleSVG from './../../assets/svg/red.svg';
 import backgroundCircleSVG from './../../assets/svg/background-circle.svg';
+import profileImage from './../../assets/img/pramod-profile.jpg';
 
 class CircleLoader extends Component {
     constructor(props,context) {
@@ -34,6 +35,7 @@ class CircleLoader extends Component {
                 <img className="orange-circle" src={orangeCircleSVG} alt="orange-circle"/>
                 <img className="red-semi-circle" src={redSemiCircleSVG} alt="red-semi-circle"/>
                 <img className="red-circle" src={redCircleSVG} alt="red-circle"/>
+                <img className="profile-image" src={profileImage} alt="profile-image"/>
             </div>
         );
     }

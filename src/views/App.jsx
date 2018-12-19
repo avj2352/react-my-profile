@@ -13,8 +13,7 @@ class App extends Component {
     return (
       <AppProvider>
       <div className="App">
-        <header className="App-header">
-          {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <header className="App-header">          
           <CircleLoader></CircleLoader>          
         </header>
       </div>

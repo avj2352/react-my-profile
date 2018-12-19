@@ -1,3 +1,5 @@
+$profile-border: #659CC8;
+
 .circle-loader {
     display: flex;
     justify-content: center;
@@ -41,6 +43,15 @@
             min-width: 500px;
             max-width: 100%;
             animation: circle-spin infinite 120s linear;
+        }
+
+        &.profile-image {
+            border: 5px solid rgba($profile-border,0.5);
+            display: block;
+            overflow: hidden;
+            border-radius: 50%;
+            width: 20%;
+            min-width: 100px;
         }
     }
 }
