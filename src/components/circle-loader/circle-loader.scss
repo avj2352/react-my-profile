@@ -1,8 +1,10 @@
 $profile-border: #659CC8;
 
 .circle-loader {
-    // width: 100%;
-    border: 1px solid yellow;
+    position: relative;
+    // border: 1px solid yellow;
+    width: 100%;
+    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;    
@@ -63,3 +65,22 @@ $profile-border: #659CC8;
       transform: rotate(0deg); }
     to {
       transform: rotate(360deg); } }
+
+
+@media (min-width:240px) {
+    .circle-loader {
+        height: 50vh;
+        img {
+            width: 200px;
+        }
+    }   
+}
+
+@media (min-width:800px) {
+    .circle-loader {
+        height: 80vh;
+        img {
+            width: 30%;
+        }
+    }   
+}

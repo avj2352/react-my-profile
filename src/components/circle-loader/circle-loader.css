@@ -1,5 +1,7 @@
 .circle-loader {
-  border: 1px solid yellow;
+  position: relative;
+  width: 100%;
+  height: 80vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -44,3 +46,15 @@
     transform: rotate(0deg); }
   to {
     transform: rotate(360deg); } }
+
+@media (min-width: 240px) {
+  .circle-loader {
+    height: 50vh; }
+    .circle-loader img {
+      width: 200px; } }
+
+@media (min-width: 800px) {
+  .circle-loader {
+    height: 80vh; }
+    .circle-loader img {
+      width: 30%; } }

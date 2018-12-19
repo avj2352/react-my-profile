@@ -1,28 +1,36 @@
 @import url("https://fonts.googleapis.com/css?family=Fjalla+One");
-.app {
-  font-family: 'Fjalla One', sans-serif;
-  letter-spacing: 2px;
-  text-align: center;
-  height: 100vh;
+.page {
   background-color: #343233;
-  color: white;
+  height: 100vh;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center; }
-  .app span.highLight {
-    color: #ffd152; }
-  .app-header {
-    text-transform: uppercase;
-    position: absolute;
-    top: 5vh;
-    width: 100%;
-    align-self: flex-start;
-    font-size: calc(10px + 2vmin); }
-  .app-subtitle {
-    position: absolute;
-    display: block;
-    bottom: 10vh;
-    align-self: flex-end;
+  flex-direction: column; }
+  .page .app {
+    font-family: 'Fjalla One', sans-serif;
+    letter-spacing: 2px;
     text-align: center;
-    width: 100%; }
+    color: white;
+    display: flex;
+    height: 90vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .page .app span.highLight {
+      color: #ffd152; }
+    .page .app-header {
+      text-transform: uppercase;
+      position: absolute;
+      top: 5vh;
+      width: 100%;
+      align-self: flex-start;
+      font-size: calc(10px + 2vmin); }
+    .page .app-subtitle {
+      position: absolute;
+      display: block;
+      bottom: 10vh;
+      align-self: flex-end;
+      text-align: center;
+      width: 100%; }
+  .page .medium-size {
+    width: 10%;
+    min-width: 200px;
+    align-self: center; }
