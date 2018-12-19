@@ -40,6 +40,7 @@ $main-background-color: #343233;
       position: absolute;
       display: block;
       bottom: 10vh;
+      margin-bottom: 5px;
       align-self: flex-end;
       text-align: center;
       width: 100%;
@@ -51,5 +52,11 @@ $main-background-color: #343233;
     width: 10%;
     min-width: 200px;
     align-self: center;
+  }
+
+  h2 {
+    display: block;
+    margin: 0;
+    font-weight: normal;
   }
 }

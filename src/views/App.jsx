@@ -19,7 +19,8 @@ class App extends Component {
         <div className="app">        
             <h1 className="app-header">Hi, I am <span className="highLight">PRAMOD JINGADE</span></h1>                  
             <CircleLoader></CircleLoader>          
-            <h2 className="app-subtitle">Avid UI / UX Designer, based in Bangalore</h2>
+            <h2>Avid UI / UX Lead Designer</h2>
+            <h2>based in <span className="highLight">Bangalore</span></h2>
         </div>      
         <Button variant="contained" color="secondary" className="medium-size">ABOUT ME</Button>
       </div>
