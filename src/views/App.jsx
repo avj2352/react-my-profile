@@ -23,6 +23,7 @@ class App extends Component {
             <h2>based in <span className="highLight">Bangalore</span></h2>
         </div>      
         <Button variant="contained" color="secondary" className="medium-size">ABOUT ME</Button>
+        
       </div>
       </AppProvider>
     );

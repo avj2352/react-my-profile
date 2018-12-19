@@ -1,5 +1,7 @@
 import React, {Component} from 'react';
 import { AppContext } from '../../common/AppContext';
+//Pose
+import posed from 'react-pose';
 //CSS
 import './circle-loader.css';
 // SVG
@@ -16,14 +18,39 @@ import redCircleSVG from './../../assets/svg/red.svg';
 import backgroundCircleSVG from './../../assets/svg/background-circle.svg';
 import profileImage from './../../assets/img/pramod-profile.jpg';
 
+
+// Creates a Wrappable component
+const FadeIn = posed.div({
+    hidden: { opacity: 0 },
+    visible: { 
+        opacity: 1,
+        transition: { 
+            duration: 1000,
+            ease: 'easeInOut'
+        }
+    },
+});
+
 class CircleLoader extends Component {
     constructor(props,context) {
         super(props,context);
+
+        this.state = {
+            isVisible: false
+        }
+    }
+
+    componentDidMount() {
+        // Show visibility after one sec
+        setTimeout(()=>{
+            this.setState({isVisible: !this.state.isVisible});
+        },1000);
     }
 
     render() {
+        const { isVisible } = this.state;
         return (
-            <div className="circle-loader">
+            <FadeIn className="circle-loader" pose={isVisible ? 'visible' : 'hidden'}>            
                 <img className="background-circle" src={backgroundCircleSVG} alt="background-circle"/>
                 <img className="blue-semi-circle" src={blueSemiCircleSVG} alt="blue-semi-circle"/>
                 <img className="blue-circle" src={blueCircleSVG} alt="blue-circle"/>
@@ -35,8 +62,8 @@ class CircleLoader extends Component {
                 <img className="orange-circle" src={orangeCircleSVG} alt="orange-circle"/>
                 <img className="red-semi-circle" src={redSemiCircleSVG} alt="red-semi-circle"/>
                 <img className="red-circle" src={redCircleSVG} alt="red-circle"/>
-                <img className="profile-image" src={profileImage} alt="profile-image"/>
-            </div>
+                <img className="profile-image" src={profileImage} alt="profile-image"/>            
+            </FadeIn>
         );
     }
 
