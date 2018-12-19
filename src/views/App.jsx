@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import logo from './logo.svg';
-import './app.css';
+import './App.css';
 // Components
 import CircleLoader from './../components/circle-loader/circle-loader.jsx';
 //Import context
