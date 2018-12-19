@@ -1,15 +1,28 @@
-.App {
-  text-align: center; }
-  .App-logo {
-    height: 40vmin; }
-  .App-header {
-    background-color: #343233;
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    font-size: calc(10px + 2vmin);
-    color: white; }
-  .App-link {
-    color: #61dafb; }
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One");
+.app {
+  font-family: 'Fjalla One', sans-serif;
+  letter-spacing: 2px;
+  text-align: center;
+  height: 100vh;
+  background-color: #343233;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+  .app span.highLight {
+    color: #ffd152; }
+  .app-header {
+    text-transform: uppercase;
+    position: absolute;
+    top: 5vh;
+    width: 100%;
+    align-self: flex-start;
+    font-size: calc(10px + 2vmin); }
+  .app-subtitle {
+    position: absolute;
+    display: block;
+    bottom: 10vh;
+    align-self: flex-end;
+    text-align: center;
+    width: 100%; }
