@@ -1,7 +1,6 @@
 @import url("https://fonts.googleapis.com/css?family=Fjalla+One");
 .page {
   background-color: #343233;
-  height: 100vh;
   display: flex;
   flex-direction: column; }
   .page .app {
@@ -13,7 +12,8 @@
     height: 90vh;
     flex-direction: column;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    margin-bottom: 20px; }
     .page .app span.highLight {
       color: #ffd152; }
     .page .app-header {

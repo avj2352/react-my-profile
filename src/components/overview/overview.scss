@@ -1,0 +1,25 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+@import url('https://fonts.googleapis.com/css?family=Fjalla+One');
+
+$yellow-color: #ffd152;
+
+.overview-section {    
+    font-family: 'Roboto Condensed', sans-serif;
+    font-size: 1.2rem;
+    letter-spacing: 1px;
+    font-weight: normal;
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    text-align: center;
+    width: 60%;
+    color: white;
+
+    .about-me {
+      // border: 1px solid red;
+    }
+
+    h2 {
+      font-family: 'Fjalla One', sans-serif;      
+    }
+  }

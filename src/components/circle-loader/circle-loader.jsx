@@ -1,5 +1,4 @@
 import React, {Component} from 'react';
-import { AppContext } from '../../common/AppContext';
 //Pose
 import posed from 'react-pose';
 //CSS
@@ -62,13 +61,11 @@ class CircleLoader extends Component {
                 <img className="orange-circle" src={orangeCircleSVG} alt="orange-circle"/>
                 <img className="red-semi-circle" src={redSemiCircleSVG} alt="red-semi-circle"/>
                 <img className="red-circle" src={redCircleSVG} alt="red-circle"/>
-                <img className="profile-image" src={profileImage} alt="profile-image"/>            
+                <img className="profile-image" src={profileImage} alt="profile"/>            
             </FadeIn>
         );
     }
 
 }
-
-CircleLoader.contextType = AppContext;
 
 export default CircleLoader;

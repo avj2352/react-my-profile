@@ -10,8 +10,11 @@ export class AppProvider extends Component {
     constructor(){
         super();
         this.state = {
-            header: 'My Profile',
-            subHeader: 'Back side of the card'
+            name: 'Pramod A Jingade',
+            title:'UI / UX Designer, Developer',
+            overview: "8 years of experience in the field of Web design and development. Worked in Airline Industry & Health Care sector comprising Architecture, Supervisory & Project Management skills",
+            currentWork: 'Currently working as UI / UX Technical Lead @ PHILIPS'
+
         }
     }
 
