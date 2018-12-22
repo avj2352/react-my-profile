@@ -17,6 +17,9 @@ import redCircleSVG from './../../assets/svg/red.svg';
 import backgroundCircleSVG from './../../assets/svg/background-circle.svg';
 import profileImage from './../../assets/img/pramod-profile.jpg';
 
+// import context
+import { AppContext } from '../../common/AppContext';
+
 
 // Creates a Wrappable component
 const FadeIn = posed.div({
@@ -71,5 +74,7 @@ class CircleLoader extends Component {
     }
 
 }
+
+CircleLoader.contextType = AppContext;
 
 export default CircleLoader;
