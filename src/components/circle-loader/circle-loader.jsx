@@ -35,33 +35,37 @@ class CircleLoader extends Component {
         super(props,context);
 
         this.state = {
-            isVisible: false
+            isVisible: false,
+            counter: 0,
+            total: 11
         }
-    }
 
-    componentDidMount() {
-        // Show visibility after one sec
-        setTimeout(()=>{
-            this.setState({isVisible: !this.state.isVisible});
-        },1000);
+        this.fadeInCircles = this.fadeInCircles.bind(this);
+    }    
+
+    fadeInCircles() {        
+        this.setState((prev)=>({counter:prev.counter+1}));
+        if(this.state.counter == this.state.total) {
+            this.setState({isVisible:true});
+        }
     }
 
     render() {
         const { isVisible } = this.state;
         return (
             <FadeIn className="circle-loader" pose={isVisible ? 'visible' : 'hidden'}>            
-                <img className="background-circle" src={backgroundCircleSVG} alt="background-circle"/>
-                <img className="blue-semi-circle" src={blueSemiCircleSVG} alt="blue-semi-circle"/>
-                <img className="blue-circle" src={blueCircleSVG} alt="blue-circle"/>
-                <img className="green-semi-circle" src={greenSemiCircleSVG} alt="green-semi-circle"/>
-                <img className="green-circle" src={greenCircleSVG} alt="green-circle"/>
-                <img className="yellow-semi-circle" src={yellowSemiCircleSVG} alt="yellow-semi-circle"/>
-                <img className="yellow-circle" src={yellowCircleSVG} alt="yellow-circle"/>
-                <img className="orange-semi-circle" src={orangeSemiCircleSVG} alt="orange-semi-circle"/>
-                <img className="orange-circle" src={orangeCircleSVG} alt="orange-circle"/>
-                <img className="red-semi-circle" src={redSemiCircleSVG} alt="red-semi-circle"/>
-                <img className="red-circle" src={redCircleSVG} alt="red-circle"/>
-                <img className="profile-image" src={profileImage} alt="profile"/>            
+                <img onLoad={this.fadeInCircles} className="background-circle" src={backgroundCircleSVG} alt="background-circle"/>
+                <img onLoad={this.fadeInCircles} className="blue-semi-circle" src={blueSemiCircleSVG} alt="blue-semi-circle"/>
+                <img onLoad={this.fadeInCircles} className="blue-circle" src={blueCircleSVG} alt="blue-circle"/>
+                <img onLoad={this.fadeInCircles} className="green-semi-circle" src={greenSemiCircleSVG} alt="green-semi-circle"/>
+                <img onLoad={this.fadeInCircles} className="green-circle" src={greenCircleSVG} alt="green-circle"/>
+                <img onLoad={this.fadeInCircles} className="yellow-semi-circle" src={yellowSemiCircleSVG} alt="yellow-semi-circle"/>
+                <img onLoad={this.fadeInCircles} className="yellow-circle" src={yellowCircleSVG} alt="yellow-circle"/>
+                <img onLoad={this.fadeInCircles} className="orange-semi-circle" src={orangeSemiCircleSVG} alt="orange-semi-circle"/>
+                <img onLoad={this.fadeInCircles} className="orange-circle" src={orangeCircleSVG} alt="orange-circle"/>
+                <img onLoad={this.fadeInCircles} className="red-semi-circle" src={redSemiCircleSVG} alt="red-semi-circle"/>
+                <img onLoad={this.fadeInCircles} className="red-circle" src={redCircleSVG} alt="red-circle"/>
+                <img onLoad={this.fadeInCircles} className="profile-image" src={profileImage} alt="profile"/>            
             </FadeIn>
         );
     }
