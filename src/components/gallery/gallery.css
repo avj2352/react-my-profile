@@ -1,0 +1,15 @@
+.gallery-section {
+  color: white; }
+  .gallery-section .menu-item {
+    padding: 0 40px;
+    margin: 5px 10px;
+    user-select: none;
+    cursor: pointer;
+    border: none; }
+  .gallery-section .menu-item-wrapper.active {
+    border: 1px blue solid; }
+  .gallery-section .menu-item.active {
+    border: 1px green solid; }
+  .gallery-section .scroll-menu-arrow {
+    padding: 20px;
+    cursor: pointer; }
