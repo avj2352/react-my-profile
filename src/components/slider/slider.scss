@@ -1,0 +1,23 @@
+.menu-item {
+    // border: 1px solid yellow;
+    padding: 0 10px;
+    margin: 5px 20px;
+    user-select: none;
+    cursor: pointer;    
+
+    &-wrapper.active {
+      // border: 1px blue solid;
+    }
+    &.active {
+      // border: 1px green solid;
+    }
+    img {
+      width: 100%
+    }
+  }
+  
+   
+  .scroll-menu-arrow {
+    padding: 20px;
+    cursor: pointer;
+  }

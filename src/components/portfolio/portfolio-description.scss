@@ -1,0 +1,15 @@
+$color-gold: #DDA032;
+
+.portfolio-description {
+    // border: 1px solid yellow;
+    margin: 5%;
+    color: black;
+    align-self: center;
+    border-radius: 5px;
+    display: flex;
+    // height: 20vh;
+    width: 90%;
+    padding: 10px;
+    justify-content: center;
+    background-color: $color-gold;
+}

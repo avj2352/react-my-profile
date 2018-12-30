@@ -7,20 +7,50 @@ import Overview from './../components/overview/overview.jsx';
 import Gallery from './../components/gallery/gallery.jsx';
 //Context
 import {AppProvider, AppContext} from './../common/AppContext';
-// Material Components
-
+// Thmbnail Images
+import webThmb01 from './../assets/img/gallery/web/thmbnails/img-01.png';
+import webThmb02 from './../assets/img/gallery/web/thmbnails/img-02.png';
+import webThmb03 from './../assets/img/gallery/web/thmbnails/img-03.png';
+import webThmb04 from './../assets/img/gallery/web/thmbnails/img-04.png';
+import webThmb05 from './../assets/img/gallery/web/thmbnails/img-05.png';
 // Gallery 1
 // list of items
-const list = [
-  { name: 'item1' },
-  { name: 'item2' },
-  { name: 'item3' },
-  { name: 'item4' },
-  { name: 'item5' },
-  { name: 'item6' },
-  { name: 'item7' },
-  { name: 'item8' },
-  { name: 'item9' }
+const siteList = [
+    { 
+      name: 'item1',
+      thmbnailImg: webThmb01,
+      portfolioImg: '',
+      title: 'Trinity Hospital',
+      description: 'First Freelance website design',
+    },
+    { 
+      name: 'item2',
+      thmbnailImg: webThmb02,
+      portfolioImg: '',
+      title: 'Trinity Hospital',
+      description: 'First Freelance website design',
+    },
+    { 
+      name: 'item3',
+      thmbnailImg: webThmb03,
+      portfolioImg: '',
+      title: 'Trinity Hospital',
+      description: 'First Freelance website design',
+    },
+    { 
+      name: 'item4',
+      thmbnailImg: webThmb04,
+      portfolioImg: '',
+      title: 'Trinity Hospital',
+      description: 'First Freelance website design',
+    },
+    { 
+      name: 'item5',
+      thmbnailImg: webThmb05,
+      portfolioImg: '',
+      title: 'Trinity Hospital',
+      description: 'First Freelance website design',
+    }  
 ];
 
 class App extends Component {
@@ -37,7 +67,7 @@ class App extends Component {
             <h2>based in <span className="highLight">Bangalore</span></h2>
         </div>              
           <Overview/>       
-          <Gallery list={list}/> 
+          <Gallery title='Websites' list={siteList}/> 
       </div>
       </AppProvider>
     );

@@ -1,15 +1,11 @@
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One");
 .gallery-section {
+  font-family: 'Fjalla One', sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   color: white; }
-  .gallery-section .menu-item {
-    padding: 0 40px;
-    margin: 5px 10px;
-    user-select: none;
-    cursor: pointer;
-    border: none; }
-  .gallery-section .menu-item-wrapper.active {
-    border: 1px blue solid; }
-  .gallery-section .menu-item.active {
-    border: 1px green solid; }
-  .gallery-section .scroll-menu-arrow {
-    padding: 20px;
-    cursor: pointer; }
+  .gallery-section h2 {
+    color: #ffd152;
+    letter-spacing: 1px;
+    align-self: center; }

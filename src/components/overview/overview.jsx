@@ -44,6 +44,7 @@ class Overview extends Component {
                 <FadeIn ref={this.myRef} className="about-me" pose={isVisible ? 'visible' : 'hidden'}>
                     <p>{this.context.overview}</p>
                     <p>{this.context.currentWork}</p>                
+                    <Button variant="contained" color="secondary" className="medium-size">MY WORKS</Button>
                 </FadeIn>
             </div>
         );

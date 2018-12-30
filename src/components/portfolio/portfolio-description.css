@@ -1,0 +1,10 @@
+.portfolio-description {
+  margin: 5%;
+  color: black;
+  align-self: center;
+  border-radius: 5px;
+  display: flex;
+  width: 90%;
+  padding: 10px;
+  justify-content: center;
+  background-color: #DDA032; }
