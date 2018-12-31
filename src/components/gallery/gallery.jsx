@@ -10,8 +10,17 @@ import { PortfolioDescription }  from './../portfolio/portfolio-description.jsx'
 // CSS
 import './gallery.css';
 
-// Horizontal Functional Components
-
+// FadeIn React Pose
+const FadeIn = posed.div({
+    hidden: { opacity: 0 },
+    visible: { 
+        opacity: 1,
+        transition: { 
+            duration: 1500,
+            ease: 'easeInOut'
+        }
+    },
+});
 
    
 class Gallery extends Component {
@@ -19,7 +28,7 @@ class Gallery extends Component {
         super(props, context);
         this.state = {
             selected: 0,
-            description:'A Collection of all the Websites I have worked on'
+            description:'A Collection of all the Websites I have worked on'            
         }
         this.onSelect = this.onSelect.bind(this);
     }
@@ -32,7 +41,7 @@ class Gallery extends Component {
         const { selected } = this.state;
         const menu = Menu(this.props.list, selected);
         return (
-            <div className="gallery-section">
+            <FadeIn className="gallery-section" pose={this.context.isGallery ? 'visible' : 'hidden'}>
                 <h2>{this.props.title}</h2>
                 <ScrollMenu
                     data={menu}
@@ -41,7 +50,7 @@ class Gallery extends Component {
                     selected={selected}
                     onSelect={this.onSelect}/>
                 <PortfolioDescription description={this.state.description}/>
-            </div>
+            </FadeIn>
         );
     }
 }

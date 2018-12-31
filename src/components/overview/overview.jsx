@@ -27,6 +27,7 @@ class Overview extends Component {
             isVisible: false
         }
         this.showAboutMeSection = this.showAboutMeSection.bind(this);
+        this.triggerGallerySection = this.triggerGallerySection.bind(this);
     }
 
     showAboutMeSection(e) {
@@ -36,6 +37,12 @@ class Overview extends Component {
             behavior: "smooth"  // Optional, adds animation
         })
     }
+
+    triggerGallerySection() {
+        const gallery = this.context.showGallery();
+        console.log('Triggering context', gallery);
+    }
+
     render() {
         const {isVisible} = this.state;
         return (
@@ -44,7 +51,7 @@ class Overview extends Component {
                 <FadeIn ref={this.myRef} className="about-me" pose={isVisible ? 'visible' : 'hidden'}>
                     <p>{this.context.overview}</p>
                     <p>{this.context.currentWork}</p>                
-                    <Button variant="contained" color="secondary" className="medium-size">MY WORKS</Button>
+                    <Button onClick={this.triggerGallerySection} variant="contained" color="secondary" className="medium-size">MY WORKS</Button>
                 </FadeIn>
             </div>
         );

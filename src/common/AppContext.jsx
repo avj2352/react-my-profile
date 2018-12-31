@@ -15,7 +15,11 @@ export class AppProvider extends Component {
             title:'Designer',
             overview: 'I design everything React JS',
             currentWork: 'Working @ PHILIPS',
-            isLoaded:false
+            isLoaded:false,
+            isGallery : false,
+            showGallery: ()=> {
+                this.setState({isGallery : true});                
+            }
         }
     }
 
@@ -36,6 +40,10 @@ export class AppProvider extends Component {
         .catch(error => {
             console.log('Error response is: ', error);
         })
+    }
+
+    componentDidUpdate() {
+        // console.log('Gallery value: ', this.state.isGallery);
     }
 
     render() {
