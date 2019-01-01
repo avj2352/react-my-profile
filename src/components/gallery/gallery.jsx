@@ -34,8 +34,16 @@ class Gallery extends Component {
     }
 
     onSelect = key => {
-        this.setState({ selected: key });
+        const selectedItem = this.props.list.filter(item => item.name == key)[0];
+        this.setState({ selected: selectedItem });
+        this.setState({description: selectedItem.description});
       }
+
+    
+    componentDidUpdate() {
+        console.log('State updated: ', this.state.selected);
+        
+    }
 
     render () {
         const { selected } = this.state;
