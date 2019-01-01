@@ -1,10 +1,27 @@
-.portfolio-description {
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
+@import url("https://fonts.googleapis.com/css?family=Fjalla+One");
+.portfolio {
+  display: grid;
+  grid-template-areas: 'titleSection titleSection titleSection' 'contentSection contentSection imageSection' 'contentSection contentSection imageSection';
+  font-family: 'Roboto Condensed', sans-serif;
   margin: 5%;
-  color: black;
+  color: #DDA032;
   align-self: center;
   border-radius: 5px;
-  display: flex;
-  width: 90%;
+  width: 80%;
   padding: 10px;
-  justify-content: center;
-  background-color: #DDA032; }
+  border: 2px solid #DDA032;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.75); }
+  .portfolio-title {
+    font-family: 'Fjalla One', sans-serif;
+    text-transform: uppercase;
+    font-weight: normal;
+    grid-area: titleSection;
+    justify-self: center; }
+  .portfolio-description {
+    grid-area: contentSection; }
+  .portfolio-image {
+    grid-area: imageSection; }

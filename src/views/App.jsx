@@ -21,7 +21,7 @@ const siteList = [
       thmbnailImg: webThmb01,
       portfolioImg: '',
       title: 'VCS Pharmaceuticals',
-      description: 'Freelance website for a pharmaceutical company. Visit - http://www.http://vcspharmaceutical.com',
+      description: 'Freelance website for a pharmaceutical company. Visit - http://vcspharmaceutical.com',
     },
     { 
       name: 'item2',

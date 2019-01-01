@@ -28,22 +28,16 @@ class Gallery extends Component {
         super(props, context);
         this.state = {
             selected: 0,
-            description:'A Collection of all the Websites I have worked on'            
+            details:'A Collection of all the Websites I have worked on'            
         }
         this.onSelect = this.onSelect.bind(this);
     }
 
     onSelect = key => {
         const selectedItem = this.props.list.filter(item => item.name == key)[0];
-        this.setState({ selected: selectedItem });
-        this.setState({description: selectedItem.description});
+        this.setState({ selected: key });
+        this.setState({details: selectedItem});
       }
-
-    
-    componentDidUpdate() {
-        console.log('State updated: ', this.state.selected);
-        
-    }
 
     render () {
         const { selected } = this.state;
@@ -57,7 +51,7 @@ class Gallery extends Component {
                     arrowRight={ArrowRight}
                     selected={selected}
                     onSelect={this.onSelect}/>
-                <PortfolioDescription description={this.state.description}/>
+                <PortfolioDescription details={this.state.details}/>
             </FadeIn>
         );
     }
