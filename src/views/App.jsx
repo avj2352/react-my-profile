@@ -62,6 +62,7 @@ class App extends Component {
   render() {
     const name = <AppContext.Consumer>{(context) => context.name}</AppContext.Consumer>
     const title = <AppContext.Consumer>{(context) => context.title}</AppContext.Consumer>
+    const place = <AppContext.Consumer>{(context) => context.place}</AppContext.Consumer>
     return (
       <AppProvider>
       <div className="page">
@@ -69,7 +70,7 @@ class App extends Component {
             <h1 className="app-header">Hi, I am <span className="highLight">{name}</span></h1>                  
             <CircleLoader></CircleLoader>          
             <h2>{title}</h2>
-            <h2>based in <span className="highLight">Bangalore</span></h2>
+            <h2>based in <span className="highLight">{place}</span></h2>
         </div>              
           <Overview/>       
           <Gallery title='Websites' list={siteList}/> 
