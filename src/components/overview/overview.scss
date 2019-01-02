@@ -27,4 +27,14 @@ $yellow-color: #ffd152;
     span.highLight {
       color: $yellow-color;
     }
+
+    &-files {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-around;
+      
+      .link-buttons {
+        color: white;
+      }
+    }
   }

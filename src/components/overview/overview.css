@@ -16,3 +16,9 @@
     font-family: 'Fjalla One', sans-serif; }
   .overview-section span.highLight {
     color: #ffd152; }
+  .overview-section-files {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around; }
+    .overview-section-files .link-buttons {
+      color: white; }

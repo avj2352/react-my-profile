@@ -51,6 +51,10 @@ class Overview extends Component {
                 <FadeIn ref={this.myRef} className="about-me" pose={isVisible ? 'visible' : 'hidden'}>
                     <p>{this.context.overview}</p>
                     <p>currently working as <span className="highLight">{this.context.currentWork}</span></p>                
+                    <div className="overview-section-files">
+                    <Button href={this.context.resumeFileLocation} className="link-buttons">Resume</Button>
+                    <Button href={this.context.coverLetterFileLocation} className="link-buttons">Cover Letter</Button>
+                    </div>
                     <Button onClick={this.triggerGallerySection} variant="contained" color="secondary" className="medium-size">MY WORKS</Button>
                 </FadeIn>
             </div>

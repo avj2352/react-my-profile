@@ -1,4 +1,4 @@
-import { profileRef } from './../config/firebaseConfig';
+import { profileRef, storageObj } from './../config/firebaseConfig';
 import { Promise } from 'firebase';
 
 // Get Profile data
@@ -17,4 +17,10 @@ export function getProfileData(){
     });
     return promise;
 }//end:getProfileData
+
+//Get Resume and Cover Letter
+
+export function getProfileLocation(filename) {
+    return storageObj.ref('/').child(filename).getDownloadURL();
+}
 
