@@ -22,6 +22,33 @@
     grid-area: titleSection;
     justify-self: center; }
   .portfolio-description {
+    padding-left: 20px;
+    position: relative;
+    width: 95%;
     grid-area: contentSection; }
   .portfolio-image {
-    grid-area: imageSection; }
+    border-radius: 10px;
+    grid-area: imageSection;
+    width: 100%;
+    max-width: 500px;
+    -webkit-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.75);
+    box-shadow: 0px 2px 20px 0px rgba(0, 0, 0, 0.75); }
+
+@media (min-width: 240px) {
+  .portfolio {
+    grid-template-areas: 'titleSection titleSection titleSection' 'contentSection contentSection contentSection' 'imageSection imageSection imageSection'; }
+  -image {
+    grid-area: imageSection;
+    width: 60%; } }
+
+@media (min-width: 800px) {
+  .portfolio {
+    grid-template-areas: 'titleSection titleSection titleSection' 'contentSection contentSection imageSection' 'contentSection contentSection imageSection'; }
+  -description {
+    padding-left: 50px;
+    position: relative;
+    width: 95%;
+    justify-content: center;
+    align-self: center;
+    grid-area: contentSection; } }

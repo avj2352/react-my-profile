@@ -1,5 +1,4 @@
 .menu-item {
-  padding: 0 10px;
   margin: 5px 20px;
   user-select: none;
   cursor: pointer; }
@@ -15,3 +14,15 @@
 .scroll-menu-arrow {
   padding: 20px;
   cursor: pointer; }
+
+@media (min-width: 240px) {
+  .menu-item {
+    width: 60%; }
+    .menu-item img {
+      width: 100%; } }
+
+@media (min-width: 800px) {
+  .menu-item {
+    width: 80%; }
+    .menu-item img {
+      width: 100%; } }

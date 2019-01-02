@@ -9,7 +9,7 @@ import './portfolio-description.css';
       content = <div className="portfolio">
                   <h1 className="portfolio-title">{data.details.title}</h1>
                   <p className="portfolio-description">{data.details.description}</p>
-                  <img className="portfolio-image"/>
+                  <img src={data.details.portfolioImg} className="portfolio-image"/>
                 </div>
     } else {
       content = <div className="portfolio">

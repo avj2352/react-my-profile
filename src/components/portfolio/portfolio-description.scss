@@ -2,6 +2,13 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 $color-gold: #DDA032;
 
+@mixin shadowy(){
+    // box shadow
+    -webkit-box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.75);
+    box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.75);
+}
+
 .portfolio {
     // border: 1px solid yellow;
     display: grid;
@@ -18,11 +25,8 @@ $color-gold: #DDA032;
     padding: 10px;    
     border: 2px solid $color-gold;
     background-color: rgba(black,0.4);
-
-    // box shadow
-    -webkit-box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.75);
-    -moz-box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.75);
-    box-shadow: 0px 2px 20px 0px rgba(0,0,0,0.75);
+    @include shadowy();
+    
 
     &-title {
         font-family: 'Fjalla One', sans-serif;
@@ -31,12 +35,55 @@ $color-gold: #DDA032;
         grid-area: titleSection;
         justify-self: center;
     }
-
+    
     &-description {
-        grid-area: contentSection;        
+        // border: 1px solid red;
+        padding-left: 20px;
+        position: relative;
+        width: 95%;
+        grid-area: contentSection;
     }
 
     &-image {
-       grid-area: imageSection;
+        // border: 1px solid red;
+        border-radius: 10px;
+        grid-area: imageSection;
+        width: 100%;
+        max-width: 500px;
+        
+        @include shadowy();
     }
+}
+
+@media (min-width:240px)  { 
+    .portfolio {
+        grid-template-areas: 'titleSection titleSection titleSection'
+    'contentSection contentSection contentSection'
+    'imageSection imageSection imageSection';        
+    }
+
+    &-image {        
+        grid-area: imageSection;
+        width: 60%;
+    }
+    
+}
+
+@media (min-width:800px)  { 
+    .portfolio {
+        grid-template-areas: 'titleSection titleSection titleSection'
+    'contentSection contentSection imageSection'
+    'contentSection contentSection imageSection';        
+    }
+
+    &-description {
+        // border: 1px solid red;
+        padding-left: 50px;
+        position: relative;
+        width: 95%;
+        justify-content: center;
+        align-self: center;
+        grid-area: contentSection;
+    }
+    
 }
