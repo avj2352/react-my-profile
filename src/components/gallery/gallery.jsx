@@ -28,7 +28,7 @@ class Gallery extends Component {
         super(props, context);
         this.state = {
             selected: 0,
-            details:'A Collection of all the Websites I have worked on'            
+            details:'A Collection of all the Websites I have took on as a Freelancer...'            
         }
         this.onSelect = this.onSelect.bind(this);
     }

@@ -14,3 +14,5 @@
   margin-bottom: 20px; }
   .overview-section h2 {
     font-family: 'Fjalla One', sans-serif; }
+  .overview-section span.highLight {
+    color: #ffd152; }

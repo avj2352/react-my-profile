@@ -5,6 +5,7 @@
 import React, { Component } from 'react';
 import { getProfileData } from './firedb';
 
+
 export const AppContext = React.createContext();
 
 export class AppProvider extends Component {
@@ -15,8 +16,9 @@ export class AppProvider extends Component {
             title:'Designer',
             overview: 'I design everything React JS',
             currentWork: 'Working @ PHILIPS',
+            place: 'Bangalore',
             isLoaded:false,
-            isGallery : false,
+            isGallery : false,            
             showGallery: ()=> {
                 this.setState({isGallery : true});                
             }
@@ -33,6 +35,7 @@ export class AppProvider extends Component {
                     title:data.title,
                     overview:data.overview,
                     currentWork:data.currentWork,
+                    place: data.place,
                     isLoaded:true
                 }
             );
