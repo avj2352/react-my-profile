@@ -75,8 +75,9 @@ class Overview extends Component {
                     <section className="about-me">
                         <div className="paragraph">
                             <article>
-                                <p>{this.context.overview} <br/>
-                                currently working as <span className="highLight">{this.context.currentWork}</span></p>                
+                                <p>{this.context.overview}. <br/>
+                                I also have experience with Typescript and have worked on the following frameworks: Angular JS 1.5.x, Angular2, React 16.5+, Vue 2, Node (v8+) Server side programming.<br/>
+                                Currently working as <span className="highLight">{this.context.currentWork}</span></p>                
                                 <div className="overview-section-files">                                    
                                     <Button href={this.context.resumeFileLocation} className="link-buttons">Download Resume</Button>
                                     <Button href={this.context.coverLetterFileLocation} className="link-buttons">Download Cover Letter</Button>
@@ -87,9 +88,10 @@ class Overview extends Component {
                         <div className="paragraph">
                             <img src={guitarSVG}/>
                             <article>
-                                I am an avid developer for all things Javascript. I like exploring new areas in the field of Web design.
-                                <br/>
-                                When I am not working, I like to go on long walks, sketch, play Guitar / Ukulele and goof around with my son.
+                                I am an avid developer for all things Javascript. 
+                                I like exploring new areas in the field of Web design.                                 
+                                <br/><br/>
+                                When I am not working, I like to go on long walks, sketch, play Guitar / Ukulele and goof around with my son :)
                             </article>
                         </div>
                     </section>

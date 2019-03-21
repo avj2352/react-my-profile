@@ -18,16 +18,17 @@
     justify-content: center;
     align-items: center; }
     .overview-section .about-me div.paragraph {
-      display: flex; }
+      display: flex;
+      margin-top: 10px; }
       .overview-section .about-me div.paragraph article {
         text-align: justify;
         flex-grow: 2;
-        font-size: 1.5rem; }
+        font-size: 1.3rem; }
       .overview-section .about-me div.paragraph img {
         flex-grow: 3;
         display: block;
         overflow: hidden;
-        width: 40%;
+        width: 50%;
         margin: 0 50px;
         height: 300px; }
   .overview-section h2 {
@@ -52,10 +53,6 @@
       flex-direction: column-reverse;
       justify-content: center;
       align-items: center; }
-      .about-me div.paragraph article {
-        text-align: justify;
-        flex-grow: 2;
-        font-size: 1.5rem; }
       .about-me div.paragraph img {
         flex-grow: 3;
         width: 100%;
