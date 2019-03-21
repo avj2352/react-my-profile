@@ -9,11 +9,11 @@
     text-align: center;
     color: white;
     display: flex;
-    height: 90vh;
+    height: 88vh;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin-bottom: 20px; }
+    margin-bottom: 5px; }
     .page .app span.highLight {
       color: #ffd152; }
     .page .app-header {

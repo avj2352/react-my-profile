@@ -1,62 +1,33 @@
-import React, { Component } from 'react';
-import ScrollMenu from 'react-horizontal-scrolling-menu';
-import classnames from 'classnames';
+import React, { useEffect, useState } from 'react';
 import posed from 'react-pose';
-// Custom components
+import classnames from 'classnames';
 import { AppContext } from '../../common/AppContext';
-import { Menu, ArrowLeft, ArrowRight } from './../slider/slider.jsx';
-import { PortfolioDescription }  from './../portfolio/portfolio-description.jsx';
-
-// CSS
+import { getGalleryData } from './../../common/firedb';
+//CSS and assets
 import './gallery.css';
+import ellipsisLoader from './../../assets/svg/ellipsis-loader.svg';
 
-// FadeIn React Pose
-const FadeIn = posed.div({
-    hidden: { opacity: 0 },
-    visible: { 
-        opacity: 1,
-        transition: { 
-            duration: 1500,
-            ease: 'easeInOut'
-        }
-    },
-});
+const Gallery  = (props) => {
+    //useState
+    const [galleryList, setGalleryList] = useState({});
+    //useEffect()
+    useEffect(()=>{
+        getGalleryData().then((res)=>{
+            console.log('Response is: ', res);
+            setGalleryList(res);
+        });
+    },[]); // componentDidMount
 
-   
-class Gallery extends Component {
-    constructor(props, context) {
-        super(props, context);
-        this.state = {
-            selected: 0,
-            details:'A Collection of all the Websites I have took on as a Freelancer...'            
-        }
-        this.onSelect = this.onSelect.bind(this);
-    }
-
-    onSelect = key => {
-        const selectedItem = this.props.list.filter(item => item.name == key)[0];
-        this.setState({ selected: key });
-        this.setState({details: selectedItem});
-      }
-
-    render () {
-        const { selected } = this.state;
-        const menu = Menu(this.props.list, selected);
-        return (
-            <FadeIn className="gallery-section" pose={this.context.isGallery ? 'visible' : 'hidden'}>
-                <h2>{this.props.title}</h2>
-                <ScrollMenu
-                    data={menu}
-                    arrowLeft={ArrowLeft}
-                    arrowRight={ArrowRight}
-                    selected={selected}
-                    onSelect={this.onSelect}/>
-                <PortfolioDescription details={this.state.details}/>
-            </FadeIn>
-        );
-    }
+    return(
+        <div>
+            <div className="gallery-section">            
+            <h1>SEE MY WORK</h1>
+            <img src={ellipsisLoader}/>
+            {/* <Card details = {}/> */}
+        </div>
+        </div>
+        
+    );
 }
-
-Gallery.contextType = AppContext;
 
 export default Gallery;

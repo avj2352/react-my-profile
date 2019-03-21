@@ -19,3 +19,4 @@ export const firebaseAuth = firebase.auth;
 
 // Profile table
 export const profileRef = firebase.database().ref('/profile');
+export const galleryRef = firebase.database().ref('/gallery');

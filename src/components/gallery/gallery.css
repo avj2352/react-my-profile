@@ -1,11 +1,15 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
 @import url("https://fonts.googleapis.com/css?family=Fjalla+One");
 .gallery-section {
-  font-family: 'Fjalla One', sans-serif;
+  font-family: 'Roboto Condensed', sans-serif;
   display: flex;
+  width: 100%;
   flex-direction: column;
   justify-content: center;
+  align-items: center;
   color: white; }
-  .gallery-section h2 {
-    color: #ffd152;
-    letter-spacing: 1px;
-    align-self: center; }
+  .gallery-section h1 {
+    font-size: 2.5rem;
+    letter-spacing: 1px; }
+  .gallery-section img {
+    width: 15%; }

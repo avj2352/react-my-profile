@@ -1,9 +1,8 @@
-import { profileRef, storageObj } from './../config/firebaseConfig';
+import { profileRef, storageObj, galleryRef } from './../config/firebaseConfig';
 import { Promise } from 'firebase';
 
-// Get Profile data
-export function getProfileData(){
-    let query = profileRef;
+// Private function to fetchData - refactored
+function _fetchData(query) {
     const promise = new Promise((resolve,reject)=>{
         function success(data) {
             // console.log('Success retrieving from firebase', data);
@@ -16,7 +15,17 @@ export function getProfileData(){
         return query.once('value',success,error);
     });
     return promise;
+}//end:_fetchData
+
+// Get Profile data
+export function getProfileData() {
+    return _fetchData(profileRef);
 }//end:getProfileData
+
+// Get Gallery Data
+export function getGalleryData() {
+    return _fetchData(galleryRef);
+}
 
 //Get Resume and Cover Letter
 

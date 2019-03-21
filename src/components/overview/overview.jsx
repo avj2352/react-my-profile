@@ -3,9 +3,28 @@ import React, { Component } from 'react';
 import posed from 'react-pose';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
+import Fab from '@material-ui/core/Fab';
+import Icon from '@material-ui/core/Icon';
+import PropTypes from 'prop-types';
+import ArrowDownward from '@material-ui/icons/ArrowDownward';
 import { AppContext } from '../../common/AppContext';
+// Custom Components
+import Gallery from './../gallery/gallery.jsx';
+//Assets
+import guitarSVG from './../../assets/svg/guitar.svg';
+import laptopSVG from './../../assets/svg/laptop.svg';
 // CSS
 import './overview.css';
+
+const styles = theme => ({
+    fab: {
+      margin: theme.spacing.unit,
+      alignSelf: 'center'
+    },
+    extendedIcon: {
+      marginRight: theme.spacing.unit,
+    },
+  });
 
 // Creates a Wrappable component
 const FadeIn = posed.div({
@@ -45,17 +64,36 @@ class Overview extends Component {
 
     render() {
         const {isVisible} = this.state;
+        const {classes} = this.props;
         return (
             <div className="overview-section">
-                <Button onClick={this.showAboutMeSection} variant="contained" color="secondary" className="medium-size">ABOUT ME</Button>
-                <FadeIn ref={this.myRef} className="about-me" pose={isVisible ? 'visible' : 'hidden'}>
-                    <p>{this.context.overview}</p>
-                    <p>currently working as <span className="highLight">{this.context.currentWork}</span></p>                
-                    <div className="overview-section-files">
-                    <Button href={this.context.resumeFileLocation} className="link-buttons">Resume</Button>
-                    <Button href={this.context.coverLetterFileLocation} className="link-buttons">Cover Letter</Button>
-                    </div>
-                    <Button onClick={this.triggerGallerySection} variant="contained" color="secondary" className="medium-size">MY WORKS</Button>
+                <Fab onClick={this.showAboutMeSection} color="secondary" aria-label="Edit" className={classes.fab}>
+                    <ArrowDownward/>
+                </Fab>
+                <FadeIn ref={this.myRef} pose={isVisible ? 'visible' : 'hidden'}>
+                    <h1>ABOUT ME</h1>
+                    <section className="about-me">
+                        <div className="paragraph">
+                            <article>
+                                <p>{this.context.overview} <br/>
+                                currently working as <span className="highLight">{this.context.currentWork}</span></p>                
+                                <div className="overview-section-files">                                    
+                                    <Button href={this.context.resumeFileLocation} className="link-buttons">Download Resume</Button>
+                                    <Button href={this.context.coverLetterFileLocation} className="link-buttons">Download Cover Letter</Button>
+                                </div>
+                            </article>
+                            <img src={laptopSVG}/>
+                        </div>
+                        <div className="paragraph">
+                            <img src={guitarSVG}/>
+                            <article>
+                                I am an avid developer for all things Javascript. I like exploring new areas in the field of Web design.
+                                <br/>
+                                When I am not working, I like to go on long walks, sketch, play Guitar / Ukulele and goof around with my son.
+                            </article>
+                        </div>
+                    </section>
+                    <Gallery/>
                 </FadeIn>
             </div>
         );
@@ -64,4 +102,8 @@ class Overview extends Component {
 
 Overview.contextType = AppContext;
 
-export default Overview;
+Overview.propTypes = {
+    classes: PropTypes.object.isRequired,
+};
+
+export default withStyles(styles)(Overview);

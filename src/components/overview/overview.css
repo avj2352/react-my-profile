@@ -12,6 +12,24 @@
   width: 60%;
   color: white;
   margin-bottom: 20px; }
+  .overview-section .about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .overview-section .about-me div.paragraph {
+      display: flex; }
+      .overview-section .about-me div.paragraph article {
+        text-align: justify;
+        flex-grow: 2;
+        font-size: 1.5rem; }
+      .overview-section .about-me div.paragraph img {
+        flex-grow: 3;
+        display: block;
+        overflow: hidden;
+        width: 40%;
+        margin: 0 50px;
+        height: 300px; }
   .overview-section h2 {
     font-family: 'Fjalla One', sans-serif; }
   .overview-section span.highLight {
@@ -19,6 +37,27 @@
   .overview-section-files {
     display: flex;
     flex-direction: row;
-    justify-content: space-around; }
+    justify-content: flex-start; }
     .overview-section-files .link-buttons {
       color: white; }
+
+@media (max-width: 940px) {
+  .about-me {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .about-me div.paragraph {
+      display: flex;
+      flex-direction: column-reverse;
+      justify-content: center;
+      align-items: center; }
+      .about-me div.paragraph article {
+        text-align: justify;
+        flex-grow: 2;
+        font-size: 1.5rem; }
+      .about-me div.paragraph img {
+        flex-grow: 3;
+        width: 100%;
+        margin: 0 50px;
+        height: 'auto'; } }
