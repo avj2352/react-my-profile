@@ -43,14 +43,13 @@ class Overview extends Component {
         super(props,context);
         this.myRef = React.createRef(); // Create a Ref object
         this.state = {
-            isVisible: false
+            isVisible: true
         }
         this.showAboutMeSection = this.showAboutMeSection.bind(this);
         this.triggerGallerySection = this.triggerGallerySection.bind(this);
     }
 
-    showAboutMeSection(e) {
-        this.setState({isVisible:true});
+    showAboutMeSection(e) {        
         window.scrollTo({
             top:this.myRef.current.offsetTop, 
             behavior: "smooth"  // Optional, adds animation
@@ -80,7 +79,7 @@ class Overview extends Component {
                                 Currently working as <span className="highLight">{this.context.currentWork}</span></p>                
                                 <div className="overview-section-files">                                    
                                     <Button href={this.context.resumeFileLocation} className="link-buttons">Download Resume</Button>
-                                    <Button href={this.context.coverLetterFileLocation} className="link-buttons">Download Cover Letter</Button>
+                                    <Button href={this.context.coverLetterFileLocation} className="link-buttons">Cover Letter</Button>
                                 </div>
                             </article>
                             <img src={laptopSVG}/>

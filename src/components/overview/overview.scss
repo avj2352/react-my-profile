@@ -55,6 +55,7 @@ $yellow-color: #ffd152;
       justify-content: flex-start;
       
       .link-buttons {
+        width: 50%;
         color: white;
       }
     }
@@ -80,5 +81,16 @@ $yellow-color: #ffd152;
           height: 'auto';
         }
       }      
+    }
+
+    &-files {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      
+      .link-buttons {
+        width: 20%;
+        color: white;
+      }
     }
   }
