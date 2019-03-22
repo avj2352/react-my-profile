@@ -4,9 +4,9 @@ import posed from 'react-pose';
 import { withStyles } from '@material-ui/core/styles';
 import Button from '@material-ui/core/Button';
 import Fab from '@material-ui/core/Fab';
+import ArrowDownward from '@material-ui/icons/ArrowDownward';
 import Icon from '@material-ui/core/Icon';
 import PropTypes from 'prop-types';
-import ArrowDownward from '@material-ui/icons/ArrowDownward';
 import { AppContext } from '../../common/AppContext';
 // Custom Components
 import Gallery from './../gallery/gallery.jsx';
@@ -24,7 +24,7 @@ const styles = theme => ({
     extendedIcon: {
       marginRight: theme.spacing.unit,
     },
-  });
+});
 
 // Creates a Wrappable component
 const FadeIn = posed.div({

@@ -1,15 +1,191 @@
 @import url("https://fonts.googleapis.com/css?family=Roboto+Condensed");
 @import url("https://fonts.googleapis.com/css?family=Fjalla+One");
 .gallery-section {
+  position: relative;
   font-family: 'Roboto Condensed', sans-serif;
   display: flex;
   width: 100%;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white; }
+  color: white;
+  transition: opacity 0.5s ease-in-out; }
   .gallery-section h1 {
     font-size: 2.5rem;
     letter-spacing: 1px; }
-  .gallery-section img {
-    width: 15%; }
+  .gallery-section img.loader {
+    position: relative;
+    width: 15%;
+    opacity: 1;
+    transition: opacity 0.2s ease; }
+    .gallery-section img.loader-hidden {
+      opacity: 0; }
+    .gallery-section img.loader-visible {
+      opacity: 1; }
+  .gallery-section .image-slideshow {
+    position: relative;
+    top: -6vh;
+    display: flex;
+    width: 160%;
+    opacity: 1;
+    transition: opacity 1s ease; }
+    .gallery-section .image-slideshow-hidden {
+      opacity: 0; }
+    .gallery-section .image-slideshow-visible {
+      opacity: 1; }
+    .gallery-section .image-slideshow div.navigation {
+      min-width: 10%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      z-index: 10; }
+    .gallery-section .image-slideshow div.slideshow-content {
+      padding: 5px 0px;
+      position: relative;
+      width: 80%;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      height: 350px; }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider-wrapper {
+        display: flex;
+        position: absolute;
+        left: -6vw;
+        transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+        .gallery-section .image-slideshow div.slideshow-content .cards-slider-wrapper .card {
+          flex: 1;
+          min-width: 226px;
+          opacity: 0.5;
+          transform: scale(0.7);
+          transition: opacity 300ms linear, transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-0 #card-0 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-1 #card-1 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-2 #card-2 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-3 #card-3 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-4 #card-4 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-5 #card-5 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-6 #card-6 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-7 #card-7 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-8 #card-8 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-9 #card-9 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-10 #card-10 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-11 #card-11 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-12 #card-12 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-13 #card-13 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-14 #card-14 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-15 #card-15 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-16 #card-16 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-17 #card-17 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-18 #card-18 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-19 #card-19 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-20 #card-20 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-21 #card-21 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-22 #card-22 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-23 #card-23 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-24 #card-24 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-25 #card-25 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-26 #card-26 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-27 #card-27 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-28 #card-28 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider.active-slide-29 #card-29 {
+        opacity: 1;
+        transform: scale(1); }
+      .gallery-section .image-slideshow div.slideshow-content .cards-slider {
+        position: relative;
+        max-width: 226px; }
+        .gallery-section .image-slideshow div.slideshow-content .cards-slider:after {
+          content: '';
+          display: block;
+          width: 250px;
+          height: 350px;
+          position: absolute;
+          top: 0;
+          left: 0; }
+      .gallery-section .image-slideshow div.slideshow-content:before, .gallery-section .image-slideshow div.slideshow-content:after {
+        content: '';
+        display: block;
+        width: 50%;
+        height: 120%;
+        background: linear-gradient(to right, #343233 5%, rgba(52, 50, 51, 0) 100%);
+        position: absolute;
+        top: 0;
+        left: 0;
+        z-index: 2; }
+      .gallery-section .image-slideshow div.slideshow-content:after {
+        left: auto;
+        right: 0;
+        background: linear-gradient(to left, #343233 5%, rgba(52, 50, 51, 0) 100%); }
+
+.card-info p a {
+  color: white;
+  text-decoration: none; }
+  .card-info p a:hover {
+    color: #ffd152;
+    text-decoration: underline; }
+
+.card-info p span.gold-highlight {
+  color: #ffd152; }
+
+@media (max-width: 500px) {
+  .cards-slider-wrapper {
+    position: absolute;
+    left: -50vw; } }

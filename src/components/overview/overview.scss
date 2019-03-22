@@ -73,7 +73,10 @@ $yellow-color: #ffd152;
         display: flex;
         flex-direction: column-reverse;
         justify-content: center;
-        align-items: center;        
+        align-items: center; 
+        article {
+          text-align: center;
+        }       
         img {          
           flex-grow: 3;                    
           width: 100%;

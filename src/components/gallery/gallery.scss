@@ -2,22 +2,145 @@
 @import url('https://fonts.googleapis.com/css?family=Fjalla+One');
 
 $yellow-highlight: #ffd152;
+$card-height: 350px;
 
 .gallery-section {
+    position: relative;
     font-family: 'Roboto Condensed', sans-serif;
     display: flex;
     width: 100%;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    // border: 1px solid white; 
+    align-items: center;    
     color: white;
+    transition: opacity 0.5s ease-in-out;
     h1 {
         font-size: 2.5rem;
         letter-spacing: 1px;
     }
 
-    img {
+    img.loader {
+        position: relative;        
         width: 15%;
+        opacity: 1;
+        transition: opacity 0.2s ease;
+        &-hidden {
+            opacity: 0;                        
+        }
+        &-visible {
+            opacity: 1;
+        }
+    }
+
+    .image-slideshow {
+        position: relative;
+        top:-6vh;
+        display: flex;        
+        width: 160%;
+        opacity: 1;
+        transition: opacity 1s ease;
+        &-hidden {
+            opacity: 0;            
+        }
+        &-visible {
+            opacity: 1;
+        }
+        div {          
+            &.navigation {
+                min-width: 10%;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                z-index: 10;
+            }
+            &.slideshow-content {
+                // border: 1px solid white;
+                padding: 5px 0px;
+                position: relative;
+                width: 80%;
+                display: flex;
+                justify-content: center;
+                overflow: hidden;            
+                height: $card-height;
+                .cards-slider-wrapper {
+                    display: flex;
+                    position: absolute;
+                    left:-6vw;
+                    transition: transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    .card {
+                        flex: 1;
+                        min-width: 226px;
+                        opacity: 0.5;
+                        transform: scale(0.7);
+                        transition: opacity 300ms linear,
+                        transform 300ms cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    }
+                }
+
+                $i: 0;
+@for $i from 0 through 29 {
+  .cards-slider.active-slide-#{$i} #card-#{$i} {
+    opacity: 1;
+    transform: scale(1);
+  } 
+}
+
+                .cards-slider {
+                    position: relative;                    
+                    max-width: 226px;
+                    &:after {
+                        content: '';
+                        display: block;
+                        width: 250px;   
+                        height: $card-height;
+                        // outline: 5px solid $yellow-highlight;
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                    }
+                }
+                &:before,
+                &:after {
+                    content: '';
+                    display: block;
+                    width: 50%;
+                    height: 120%;
+                    background: linear-gradient(to right, rgba(#343233, 1) 5%, rgba(#343233, 0) 100%);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    z-index: 2;
+                }
+                &:after {
+                    left: auto;
+                    right: 0;
+                    background: linear-gradient(to left, rgba(#343233, 1) 5%, rgba(#343233, 0) 100%);
+                }
+              }
+        }
+    }
+}
+
+.card-info {
+    p{
+        a{
+            color: white;
+            text-decoration: none;
+            &:hover {
+                color: $yellow-highlight;
+                text-decoration: underline;
+            }
+        }
+        span.gold-highlight {
+            color: $yellow-highlight;
+        }
+    }
+}
+
+@media(max-width: 500px) {
+    .cards-slider-wrapper {        
+        position: absolute;
+        left:-50vw;        
     }
 }

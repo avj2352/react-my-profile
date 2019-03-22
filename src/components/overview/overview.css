@@ -54,6 +54,8 @@
       flex-direction: column-reverse;
       justify-content: center;
       align-items: center; }
+      .about-me div.paragraph article {
+        text-align: center; }
       .about-me div.paragraph img {
         flex-grow: 3;
         width: 100%;
