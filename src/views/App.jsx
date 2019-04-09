@@ -9,6 +9,24 @@ import {AppProvider, AppContext} from './../common/AppContext';
 //ScrollReveal
 import withScrollReveal from 'react-scrollreveal';
 
+const SCROLL_REVEAL_CONFIG = [
+  {
+    selector: '.app-header',
+    options: {
+      reset: true,
+      delay:800
+    },    
+  },
+  {
+    selector: '.heading',
+    options: {
+      reset: true,
+      delay: 800,
+    },
+    interval: 100
+  }
+];
+
 // list of items
 class App extends Component {
   render() {
@@ -33,20 +51,4 @@ class App extends Component {
 
 App.contextType = AppContext;
 
-export default withScrollReveal([
-  {
-    selector: '.app-header',
-    options: {
-      reset: true,
-      delay:800
-    },    
-  },
-  {
-    selector: '.heading',
-    options: {
-      reset: true,
-      delay: 800,
-    },
-    interval: 100
-  }
-])(App);
+export default withScrollReveal(SCROLL_REVEAL_CONFIG)(App);
